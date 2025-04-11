@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9ff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+header .logo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.add-task-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-input-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+}
+
+.add-task-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-task-form .date-picker-icon {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.add-task-form .date-picker-icon::-webkit-date-and-time-value {
+    display: none;
+}
+
+.add-task-form .date-picker-icon::-webkit-inner-spin-button,
+.add-task-form .date-picker-icon::-webkit-clear-button,
+.add-task-form .date-picker-icon::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.add-task-form .date-picker-icon::before {
+    content: '📅';
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #007bff;
+}
+
+.add-task-form .add-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-task-form .add-btn:hover {
+    background-color: #0056b3;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    display: flex;
+    align-items: center;
+}
+
+.filter-form label {
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
+}
+
+.filter-form select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filter-form button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sort {
+    font-size: 14px;
+    color: #666;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-item .task-title {
+    flex: 1;
+}
+
+.task-item input[type="checkbox"]:checked + .task-title {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.task-item input[type="checkbox"]:checked ~ .task-title,
+.task-item input[type="checkbox"]:checked ~ .priority,
+.task-item input[type="checkbox"]:checked ~ .due-date,
+.task-item input[type="checkbox"]:checked ~ .task-actions {
+    background-color: #e9ecef;
+}
+
+.task-item input[type="checkbox"]:checked ~ * {
+    background-color: #e9ecef;
+}
+
+.task-item .priority {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.task-item .priority-high {
+    background-color: #e63946; /* Red for High */
+}
+
+.task-item .priority-medium {
+    background-color: #f4c430; /* Yellow for Medium */
+}
+
+.task-item .priority-low {
+    background-color: #51cf66; /* Green for Low */
+}
+
+.task-item .due-date {
+    background-color: #ffeaa7;
+    color: #d63031;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e63946;
+}
