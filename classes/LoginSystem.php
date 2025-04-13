@@ -39,18 +39,6 @@ class LoginSystem {
         session_destroy();
     }
     
-    public function getUserById(){
-        if(isset($_SESSION['user_id'])) {
-            $query = "SELECT * FROM users WHERE id = ?";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bind_param("i", $_SESSION['user_id']);
-            $stmt->execute();
-            $result = $stmt->get_result();
-            $user = $result->fetch_assoc();
-            $stmt->close();
-            return new User($user['id'], $user['name'], $user['email']);
-        }
-        return null ;
-    }
+    
 
 }
