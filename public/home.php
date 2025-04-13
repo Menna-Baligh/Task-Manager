@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php if(!isset($_SESSION['user_id'])) header('Location: ../public/login.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,7 @@
         </header>
 
         <!-- Add Task Form -->
-        <form class="add-task-form" method="post" action="../handles/store.php">
+        <form class="add-task-form" method="post" action="../handles/logic.php">
             <div class="task-input-group">
                 <input type="text" name="title" placeholder="Task title" required>
                 <input type="text" name="discription" placeholder="Add new .." required>
@@ -31,10 +33,9 @@
             </div>
             <button type="submit" name="add" class="add-btn">Add</button>
         </form>
-            <?php session_start(); ?>
         <!-- Filter/Sort Bar -->
         <div class="filter-bar">
-            <form action="../handles/filter.php" method="post">
+            <form action="../handles/logic.php" method="post">
                 <div class="filter-form">
                     <label>Filter:
                         <select name="priority">
@@ -83,7 +84,7 @@
                         <span class="due-date"><?php echo $task->getDueDate(); ?></span>
                         <div class="task-actions">
                             <a href="edit.php?id=<?php echo $task->getId(); ?>" class="edit-btn">Edit</a>
-                            <form action="../handles/delete.php" method="post">
+                            <form action="../handles/logic.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $task->getId(); ?>">
                                 <input type="hidden" name="user_id" value="<?php echo $task->getUserId(); ?>">
                                 <button type="submit" name="delete" class="delete-btn">Delete</button>

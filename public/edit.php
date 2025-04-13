@@ -23,7 +23,7 @@
             $taskManager = new TaskManager();
             $task = $taskManager->getTaskById($_GET['id'], $_SESSION['user_id']);
         ?>
-        <form class="edit-task-form" method="post" action="../handles/update.php">
+        <form class="edit-task-form" method="post" action="../handles/logic.php">
             <div class="task-input-group">
                 <input type="hidden" name="id" value="<?php echo $task->getId()?>">
                 <input type="hidden" name="user_id" value="<?php echo $task->getUserId()?>">

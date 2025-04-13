@@ -10,7 +10,7 @@
     <body>
     <div class="login_form">
         <!-- Login form container -->
-        <form action="../handles/register.php" method="post">
+        <form action="../handles/logic.php" method="post">
         <h3>Register Form</h3>
         <div class="input_box">
             <label for="name">Name</label>

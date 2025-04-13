@@ -17,7 +17,7 @@
         ?>
     <div class="login_form">
         <!-- Login form container -->
-        <form action="../handles/login.php" method="post">
+        <form action="../handles/logic.php" method="post">
         <h3>Login Form</h3>
         
         <!-- Email input box -->
