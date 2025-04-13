@@ -23,6 +23,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
     }
+    // logout
+    elseif(isset($_POST['logout'])){
+        $loginSystem->logout();
+        header('Location: ../public/login.php');
+        exit();
+    }
     // Add Task
     elseif (isset($_POST['add']) && isset($_SESSION['user_id'])) {
         unset($_POST['add']);

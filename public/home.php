@@ -14,7 +14,10 @@
         <header>
             <h1>
                 <span class="logo">✓</span>Task-Manager
-            </h1>
+            </h1><br>
+            <form action="../handles/logic.php" method="post">
+                <button type="submit" name="logout" class="delete-btn">Logout</button>
+            </form>
         </header>
 
         <!-- Add Task Form -->
