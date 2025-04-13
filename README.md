@@ -13,7 +13,7 @@ A simple PHP-based Task Management System that allows users to register , login 
 - `TaskManager` : CRUD and filter on Tasks
 
 ### **2. Handles/**
-- this folder contains the logic and usage of classes we made
+- this folder contains the logic in `logic.php` and usage of classes we made in `app.php`
 
 ### **3. public/**
 - All front-end code i use in this folder
